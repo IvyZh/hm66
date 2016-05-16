@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="请输入电话号码"
+        android:phoneNumber="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_sms_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="请输入短信内容"
+        android:text="你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。你好么，哈哈哈。"
+        android:lines="5" >
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="send"
+        android:text="发送" />
+
+</LinearLayout>
