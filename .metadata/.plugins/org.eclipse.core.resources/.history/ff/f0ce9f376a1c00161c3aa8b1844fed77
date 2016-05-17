@@ -1,0 +1,12 @@
+package com.ivy.hm66.activity;
+
+import android.app.Activity;
+
+/**
+ * 
+ * @author X.X.L
+ *
+ */
+public class SDCardStorageActivity extends Activity {
+
+}

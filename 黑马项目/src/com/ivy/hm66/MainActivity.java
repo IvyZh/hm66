@@ -15,11 +15,17 @@ import android.widget.TextView;
 import com.ivy.hm66.activity.ButtonClickActivity;
 import com.ivy.hm66.activity.CallDemoActivity;
 import com.ivy.hm66.activity.LinearLayoutActivity;
+import com.ivy.hm66.activity.RWinRomActivity;
+import com.ivy.hm66.activity.RWinSDCardActivity;
+import com.ivy.hm66.activity.SDCardStorageActivity;
 import com.ivy.hm66.activity.SendSMSActivity;
 
 public class MainActivity extends Activity {
 
-	private String[] itemNames={"电话拨号器","按钮四种点击事件","短信发送器","线性布局"};
+	private String[] itemNames={"电话拨号器","按钮四种点击事件","短信发送器","线性布局","内部存储的读取","SDCard的读取",
+			"获取SDCard存储情况"
+	
+	};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -58,7 +64,14 @@ public class MainActivity extends Activity {
 		case 3:
 			startActivity(LinearLayoutActivity.class);
 			break;
-		default:
+		case 4:
+			startActivity(RWinRomActivity.class);
+			break;
+		case 5:
+			startActivity(RWinSDCardActivity.class);
+			break;
+		case 6:
+			startActivity(SDCardStorageActivity.class);
 			break;
 		}
 		

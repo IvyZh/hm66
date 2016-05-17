@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
- * 演示Button点击事件界面
+ * 演示 Button点击事件 界面
  * @author Ivy
  *
  */

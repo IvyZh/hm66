@@ -1,0 +1,11 @@
+package com.ivy.hm66.activity;
+
+import android.app.Activity;
+
+/**
+ * SDCard存储情况 界面
+ * @author Ivy
+ */
+public class SDCardStorageActivity extends Activity {
+
+}

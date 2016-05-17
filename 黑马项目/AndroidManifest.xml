@@ -9,6 +9,7 @@
         android:targetSdkVersion="17" />
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -28,6 +29,9 @@
         <activity android:name="com.ivy.hm66.activity.ButtonClickActivity"/>
         <activity android:name="com.ivy.hm66.activity.SendSMSActivity"/>
         <activity android:name="com.ivy.hm66.activity.LinearLayoutActivity"/>
+        <activity android:name="com.ivy.hm66.activity.RWinRomActivity"/>
+        <activity android:name="com.ivy.hm66.activity.RWinSDCardActivity"/>
+        <activity android:name="com.ivy.hm66.activity.SDCardStorageActivity"/>
     </application>
 
 </manifest>
