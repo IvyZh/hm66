@@ -1,0 +1,54 @@
+package com.ivy.hm66.activity;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.activity.domain.Person;
+
+import android.app.Activity;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+/**
+ * 演示TextView显示数据库数据 界面
+ * @author Ivy
+ */
+public class ShowDataActivity extends Activity {
+	
+	private ArrayList<Person> personList;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.activity_showdata);
+		
+		
+		MyOpenHelper oh = new MyOpenHelper(this);
+		SQLiteDatabase db = oh.getWritableDatabase();
+		Cursor cursor = db.query("person", null, null, null, null, null, null);
+		personList = new ArrayList<Person>();
+		while(cursor.moveToNext()){
+			String name = cursor.getString(cursor.getColumnIndex("name"));
+			String phone = cursor.getString(cursor.getColumnIndex("phone"));
+			int salary = cursor.getInt(cursor.getColumnIndex("salary"));
+			Person person = new Person(name, salary, phone);
+			personList.add(person);
+		}
+		
+		LinearLayout ll = (LinearLayout) findViewById(R.id.ll);
+		for (Person p : personList) {
+			System.out.println(p);
+			TextView tv = new TextView(this);
+			tv.setText(p.toString());
+			ll.addView(tv);
+		}
+		
+			
+	}
+}

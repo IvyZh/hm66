@@ -7,15 +7,23 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.ivy.hm66" >
+    </instrumentation>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
         <activity
             android:name="com.ivy.hm66.MainActivity"
             android:label="@string/app_name" >
@@ -25,13 +33,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ivy.hm66.activity.CallDemoActivity"/>
-        <activity android:name="com.ivy.hm66.activity.ButtonClickActivity"/>
-        <activity android:name="com.ivy.hm66.activity.SendSMSActivity"/>
-        <activity android:name="com.ivy.hm66.activity.LinearLayoutActivity"/>
-        <activity android:name="com.ivy.hm66.activity.RWinRomActivity"/>
-        <activity android:name="com.ivy.hm66.activity.RWinSDCardActivity"/>
-        <activity android:name="com.ivy.hm66.activity.SDCardStorageActivity"/>
+        <activity android:name="com.ivy.hm66.activity.CallDemoActivity" />
+        <activity android:name="com.ivy.hm66.activity.ButtonClickActivity" />
+        <activity android:name="com.ivy.hm66.activity.SendSMSActivity" />
+        <activity android:name="com.ivy.hm66.activity.LinearLayoutActivity" />
+        <activity android:name="com.ivy.hm66.activity.RWinRomActivity" />
+        <activity android:name="com.ivy.hm66.activity.RWinSDCardActivity" />
+        <activity android:name="com.ivy.hm66.activity.SDCardStorageActivity" />
+        <activity android:name="com.ivy.hm66.activity.SharedPreferenceActivity" />
+        <activity android:name="com.ivy.hm66.activity.CreateXMLActivity" />
+        <activity android:name="com.ivy.hm66.activity.PullXmlActivity" />
+        <activity android:name="com.ivy.hm66.activity.ShowDataActivity" />
+        <activity android:name="com.ivy.hm66.activity.ShowDataActivity2" />
+        <activity android:name="com.ivy.hm66.activity.ArraySimpleAdapterActivity" />
     </application>
 
 </manifest>

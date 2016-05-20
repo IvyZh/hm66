@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<weather>
+<city>
+	<name>xx</name>
+	<temp>32</temp>
+	<pm25>44</pm25>
+</city>
+
+<city>
+	<name>yy</name>
+	<temp>28</temp>
+	<pm25>66</pm25>
+</city>
+
+<city>
+	<name>zz</name>
+	<temp>35</temp>
+	<pm25>77</pm25>
+</city>
+
+</weather>

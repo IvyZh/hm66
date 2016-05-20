@@ -12,18 +12,25 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.ivy.hm66.activity.ArraySimpleAdapterActivity;
 import com.ivy.hm66.activity.ButtonClickActivity;
 import com.ivy.hm66.activity.CallDemoActivity;
+import com.ivy.hm66.activity.CreateXMLActivity;
 import com.ivy.hm66.activity.LinearLayoutActivity;
+import com.ivy.hm66.activity.PullXmlActivity;
 import com.ivy.hm66.activity.RWinRomActivity;
 import com.ivy.hm66.activity.RWinSDCardActivity;
 import com.ivy.hm66.activity.SDCardStorageActivity;
 import com.ivy.hm66.activity.SendSMSActivity;
+import com.ivy.hm66.activity.SharedPreferenceActivity;
+import com.ivy.hm66.activity.ShowDataActivity;
+import com.ivy.hm66.activity.ShowDataActivity2;
 
 public class MainActivity extends Activity {
 
 	private String[] itemNames={"电话拨号器","按钮四种点击事件","短信发送器","线性布局","内部存储的读取","SDCard的读取",
-			"获取SDCard存储情况"
+			"获取SDCard存储情况","SharedPrefrence存储","创建XML文件","解析XML文件","TextView显示数据库数据","ListView显示数据库数据",
+			"ArrayAdapter&SimpleAdapter",
 	
 	};
 	@Override
@@ -72,6 +79,24 @@ public class MainActivity extends Activity {
 			break;
 		case 6:
 			startActivity(SDCardStorageActivity.class);
+			break;
+		case 7:
+			startActivity(SharedPreferenceActivity.class);
+			break;
+		case 8:
+			startActivity(CreateXMLActivity.class);
+			break;
+		case 9:
+			startActivity(PullXmlActivity.class);
+			break;
+		case 10:
+			startActivity(ShowDataActivity.class);
+			break;
+		case 11:
+			startActivity(ShowDataActivity2.class);
+			break;
+		case 12:
+			startActivity(ArraySimpleAdapterActivity.class);
 			break;
 		}
 		
