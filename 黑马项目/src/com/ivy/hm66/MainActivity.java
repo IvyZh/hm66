@@ -1,5 +1,9 @@
 package com.ivy.hm66;
 
+import java.util.Collections;
+
+import org.apache.http.client.HttpClient;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +20,11 @@ import com.ivy.hm66.activity.ArraySimpleAdapterActivity;
 import com.ivy.hm66.activity.ButtonClickActivity;
 import com.ivy.hm66.activity.CallDemoActivity;
 import com.ivy.hm66.activity.CreateXMLActivity;
+import com.ivy.hm66.activity.HtmlWatcherActivity;
+import com.ivy.hm66.activity.HttpClientActivity;
 import com.ivy.hm66.activity.LinearLayoutActivity;
+import com.ivy.hm66.activity.NetImageActivity;
+import com.ivy.hm66.activity.NewsActivity;
 import com.ivy.hm66.activity.PullXmlActivity;
 import com.ivy.hm66.activity.RWinRomActivity;
 import com.ivy.hm66.activity.RWinSDCardActivity;
@@ -25,33 +33,18 @@ import com.ivy.hm66.activity.SendSMSActivity;
 import com.ivy.hm66.activity.SharedPreferenceActivity;
 import com.ivy.hm66.activity.ShowDataActivity;
 import com.ivy.hm66.activity.ShowDataActivity2;
+import com.ivy.hm66.activity.SmartImageViewActivity;
+import com.loopj.android.image.SmartImageView;
 
 public class MainActivity extends Activity {
 
 	private String[] itemNames={"电话拨号器","按钮四种点击事件","短信发送器","线性布局","内部存储的读取","SDCard的读取",
 			"获取SDCard存储情况","SharedPrefrence存储","创建XML文件","解析XML文件","TextView显示数据库数据","ListView显示数据库数据",
-			"ArrayAdapter&SimpleAdapter",
+			"ArrayAdapter&SimpleAdapter","网络图片查看器","SmartImageView显示图片","Html源文件查看器",
+			"Fake新闻客户端","Get方式提交表单（空）","POST方式提交表单（空）","HttpClient框架方式提交表单（空）",
 	
 	};
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		ListView mListView = (ListView) findViewById(R.id.lv_main);
-		
-		MainAdapter adapter = new MainAdapter();
-		mListView.setAdapter(adapter);
-		
-		mListView.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				startActivityByPos(position);
-			}});
-	}
-
+	
 	/**
 	 * 根据点击位置，来开启不同的界面(子项目)
 	 * @param position
@@ -98,7 +91,57 @@ public class MainActivity extends Activity {
 		case 12:
 			startActivity(ArraySimpleAdapterActivity.class);
 			break;
+		case 13:
+			startActivity(NetImageActivity.class);
+			break;
+		case 14:
+			startActivity(SmartImageViewActivity.class);
+			break;
+		case 15:
+			startActivity(HtmlWatcherActivity.class);
+			break;
+		case 16:
+			startActivity(NewsActivity.class);
+			break;
+		case 17://get方式提交表单
+			break;
+		case 18://post方式提交表单
+			break;
+		case 19://HttpClient框架方式提交表单（空）
+			startActivity(HttpClientActivity.class);
+			break;
+		case 20://async-http
+			break;
 		}
+	}
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		final ListView mListView = (ListView) findViewById(R.id.lv_main);
+		
+		MainAdapter adapter = new MainAdapter();
+		mListView.setAdapter(adapter);
+		
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				startActivityByPos(position);
+			}});
+		
+		// 为了方便测试最新项目，把ListView滑到最底部。 为什么直接写没有效果，放到View.post方法里面就可以了？
+		
+		mListView.post(new Runnable() {
+			@Override
+			public void run() {
+				mListView.smoothScrollToPosition(itemNames.length-1);
+			}
+		});
+		
 		
 	}
 	

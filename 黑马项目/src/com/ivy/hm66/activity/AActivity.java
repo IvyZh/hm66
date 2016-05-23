@@ -4,9 +4,11 @@ import com.ivy.hm66.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 
 /**
  * —› æ XXX ΩÁ√Ê
+ * 
  * @author Ivy
  */
 public class AActivity extends Activity {
@@ -14,7 +16,11 @@ public class AActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		setContentView(R.layout.activity_main);
+	}
+
+	public void click(View v) {
+
 	}
 }

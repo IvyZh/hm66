@@ -17,6 +17,8 @@
         android:targetPackage="com.ivy.hm66" >
     </instrumentation>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -46,6 +48,10 @@
         <activity android:name="com.ivy.hm66.activity.ShowDataActivity" />
         <activity android:name="com.ivy.hm66.activity.ShowDataActivity2" />
         <activity android:name="com.ivy.hm66.activity.ArraySimpleAdapterActivity" />
+        <activity android:name="com.ivy.hm66.activity.NetImageActivity" />
+        <activity android:name="com.ivy.hm66.activity.SmartImageViewActivity" />
+        <activity android:name="com.ivy.hm66.activity.HtmlWatcherActivity" />
+         <activity android:name="com.ivy.hm66.activity.NewsActivity" />
     </application>
 
 </manifest>
