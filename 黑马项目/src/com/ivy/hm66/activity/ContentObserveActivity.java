@@ -1,0 +1,51 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.database.ContentObserver;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.Toast;
+
+/**
+ * 演示 XXX 界面
+ * 
+ * @author Ivy
+ */
+public class ContentObserveActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_aaa);
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+		
+		ContentResolver cr = getContentResolver();
+		
+		MyContentObserver observer = new MyContentObserver(new Handler());
+		
+		cr.registerContentObserver(Uri.parse("content://sms"), true, observer);
+		
+	}
+	
+	class MyContentObserver extends ContentObserver{
+
+		public MyContentObserver(Handler handler) {
+			super(handler);
+		}
+		
+		@Override
+		public void onChange(boolean selfChange) {
+			super.onChange(selfChange);
+			System.out.println("----数据发生改变了---");
+		}
+	}
+}

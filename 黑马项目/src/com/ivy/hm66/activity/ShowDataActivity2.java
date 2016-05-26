@@ -1,22 +1,20 @@
 package com.ivy.hm66.activity;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-
-import com.ivy.hm66.R;
-import com.ivy.hm66.activity.domain.Person;
 
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.db.MyOpenHelper;
+import com.ivy.hm66.domain.Person;
 
 /**
  * 演示TextView显示数据库数据 界面

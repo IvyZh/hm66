@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ivy.hm66.R;
-import com.ivy.hm66.activity.domain.Weather;
+import com.ivy.hm66.domain.Weather;
 
 /**
  * 演示 Pull解析XMl  界面

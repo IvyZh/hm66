@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.ivy.hm66.R;
-import com.ivy.hm66.activity.utils.FileUtil;
+import com.ivy.hm66.utils.FileUtil;
 
 /**
  * —› æ XXX ΩÁ√Ê

@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -35,6 +36,11 @@ public class CallDemoActivity extends Activity {
 		public void onClick(View v) {
 			EditText etPhone = (EditText) findViewById(R.id.et_phone);
 			String phoneNumber = etPhone.getText().toString().trim();
+			if(TextUtils.isEmpty(phoneNumber)){
+				Toast.makeText(CallDemoActivity.this, "号码不能为空", 0).show();
+				return;
+			}
+				
 			Toast.makeText(CallDemoActivity.this, phoneNumber, 0).show();
 			
 			// 打电话逻辑

@@ -1,21 +1,20 @@
 package com.ivy.hm66.activity;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.ivy.hm66.R;
-import com.ivy.hm66.activity.domain.Person;
 
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.db.MyOpenHelper;
+import com.ivy.hm66.domain.Person;
 
 /**
  * —› æ XXX ΩÁ√Ê

@@ -1,0 +1,66 @@
+package com.ivy.hm66.service;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.Binder;
+import android.os.IBinder;
+
+import com.ivy.hm66.interfaces.PublicBusiness;
+
+public class MyService extends Service {
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		System.out.println("--服务绑定了---");
+		return new MyIBinder();
+	}
+
+	@Override
+	public boolean onUnbind(Intent intent) {
+		System.out.println("--服务解除绑定了---");
+		return super.onUnbind(intent);
+	}
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		System.out.println("--服务创建了--onCreate");
+	}
+	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		System.out.println("--服务销毁了--onDestroy");
+	}
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		System.out.println("--服务开始了--onStartCommand");
+		return super.onStartCommand(intent, flags, startId);
+		
+	}
+	
+	public void pay(int money){
+		if(money>=1000){
+			System.out.println("调用支付方式成功");
+		}else{
+			System.out.println("钱不够，不给办理");
+		}
+	}
+	
+	public void daMaJiang(){
+		System.out.println("打麻将");
+	}
+	
+	
+	public class MyIBinder extends Binder implements PublicBusiness{
+		public void callDaMaJiang(){
+			MyService.this.daMaJiang();
+		}
+
+		@Override
+		public void pay(int money) {
+			MyService.this.pay(money);
+		}
+		
+	}
+}

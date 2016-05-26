@@ -11,8 +11,8 @@ import java.util.Random;
 import org.xmlpull.v1.XmlSerializer;
 
 import com.ivy.hm66.R;
-import com.ivy.hm66.activity.domain.SMS;
-import com.ivy.hm66.activity.utils.FileUtil;
+import com.ivy.hm66.domain.SMS;
+import com.ivy.hm66.utils.FileUtil;
 
 import android.app.Activity;
 import android.os.Bundle;

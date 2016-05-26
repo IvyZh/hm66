@@ -22,8 +22,8 @@ import android.widget.Toast;
 
 import com.ivy.hm66.MainActivity;
 import com.ivy.hm66.R;
-import com.ivy.hm66.activity.cons.Constant;
-import com.ivy.hm66.activity.domain.News;
+import com.ivy.hm66.cons.Constant;
+import com.ivy.hm66.domain.News;
 import com.loopj.android.image.SmartImageView;
 
 /**

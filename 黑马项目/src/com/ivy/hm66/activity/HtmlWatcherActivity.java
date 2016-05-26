@@ -5,8 +5,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import com.ivy.hm66.R;
-import com.ivy.hm66.activity.cons.Constant;
-import com.ivy.hm66.activity.utils.FileUtil;
+import com.ivy.hm66.cons.Constant;
+import com.ivy.hm66.utils.FileUtil;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

@@ -21,6 +21,6 @@ public class AActivity extends Activity {
 	}
 
 	public void click(View v) {
-
+		System.out.println("click...");
 	}
 }

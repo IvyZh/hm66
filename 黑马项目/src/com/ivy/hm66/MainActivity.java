@@ -1,9 +1,5 @@
 package com.ivy.hm66;
 
-import java.util.Collections;
-
-import org.apache.http.client.HttpClient;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,34 +11,61 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ivy.hm66.activity.ArraySimpleAdapterActivity;
+import com.ivy.hm66.activity.AsyncHttpActivity;
 import com.ivy.hm66.activity.ButtonClickActivity;
 import com.ivy.hm66.activity.CallDemoActivity;
+import com.ivy.hm66.activity.CameraActivity;
+import com.ivy.hm66.activity.ContentObserveActivity;
+import com.ivy.hm66.activity.CopyImageActivity;
 import com.ivy.hm66.activity.CreateXMLActivity;
+import com.ivy.hm66.activity.DrawClothesActivity;
+import com.ivy.hm66.activity.GetAllContactsActivity;
+import com.ivy.hm66.activity.GetAllSmsActivity;
+import com.ivy.hm66.activity.GetMethodActivity;
 import com.ivy.hm66.activity.HtmlWatcherActivity;
 import com.ivy.hm66.activity.HttpClientActivity;
+import com.ivy.hm66.activity.ImageLoadActivity;
+import com.ivy.hm66.activity.IpCallActivity;
 import com.ivy.hm66.activity.LinearLayoutActivity;
+import com.ivy.hm66.activity.MuiltipleDownLoadActivity;
 import com.ivy.hm66.activity.NetImageActivity;
 import com.ivy.hm66.activity.NewsActivity;
+import com.ivy.hm66.activity.PaintActivity;
+import com.ivy.hm66.activity.PhoneRecorderActivity;
+import com.ivy.hm66.activity.PlayMusicActivity;
+import com.ivy.hm66.activity.PostMethodActivity;
 import com.ivy.hm66.activity.PullXmlActivity;
+import com.ivy.hm66.activity.QuickSmsActivity;
 import com.ivy.hm66.activity.RWinRomActivity;
 import com.ivy.hm66.activity.RWinSDCardActivity;
+import com.ivy.hm66.activity.RegisteBroadCastActivity;
+import com.ivy.hm66.activity.RemoteServiceActivity;
 import com.ivy.hm66.activity.SDCardStorageActivity;
+import com.ivy.hm66.activity.SendBroadCastActivity;
 import com.ivy.hm66.activity.SendSMSActivity;
+import com.ivy.hm66.activity.ServiceActivity;
 import com.ivy.hm66.activity.SharedPreferenceActivity;
 import com.ivy.hm66.activity.ShowDataActivity;
 import com.ivy.hm66.activity.ShowDataActivity2;
 import com.ivy.hm66.activity.SmartImageViewActivity;
-import com.loopj.android.image.SmartImageView;
+import com.ivy.hm66.activity.StartActivityActivity;
+import com.ivy.hm66.activity.VideoActivity;
+import com.ivy.hm66.activity.XutilsDownLoadActivity;
 
 public class MainActivity extends Activity {
 
 	private String[] itemNames={"电话拨号器","按钮四种点击事件","短信发送器","线性布局","内部存储的读取","SDCard的读取",
 			"获取SDCard存储情况","SharedPrefrence存储","创建XML文件","解析XML文件","TextView显示数据库数据","ListView显示数据库数据",
 			"ArrayAdapter&SimpleAdapter","网络图片查看器","SmartImageView显示图片","Html源文件查看器",
-			"Fake新闻客户端","Get方式提交表单（空）","POST方式提交表单（空）","HttpClient框架方式提交表单（空）",
-	
+			"Fake新闻客户端","Get方式提交表单","POST方式提交表单","HttpClient框架方式提交表单","AsyncHttp框架方式提交表单",
+			"多线程断点续传","Xutils演示下载","Activity跳转","Activity传递数据","Activity生命周期(空)","Activity四种启动模式(空)",
+			"快速发送短信","IP拨号器","短信拦截器","SDCard状态监听","应用安装更新卸载监听","开机勒索软件","发送广播",
+			"开启服务","电话录音机","代码注册和反注册广播接收者","调用远程服务","加载图片","创建图片的副本&特效","画画板","撕衣服",
+			"音乐播放器","视频播放","拍照","自定义拍照应用(空)","内容提供者","获取所有短信","获取所有联系人信息","注册内容观察者",
+			
 	};
 	
 	/**
@@ -50,7 +73,7 @@ public class MainActivity extends Activity {
 	 * @param position
 	 */
 	protected void startActivityByPos(int position) {
-		
+		Toast.makeText(this, (position+1)+" "+itemNames[position], 0).show();
 		switch (position) {
 		case 0:
 			startActivity(CallDemoActivity.class);
@@ -104,13 +127,91 @@ public class MainActivity extends Activity {
 			startActivity(NewsActivity.class);
 			break;
 		case 17://get方式提交表单
+			startActivity(GetMethodActivity.class);
 			break;
 		case 18://post方式提交表单
+			startActivity(PostMethodActivity.class);
 			break;
 		case 19://HttpClient框架方式提交表单（空）
 			startActivity(HttpClientActivity.class);
 			break;
 		case 20://async-http
+			startActivity(AsyncHttpActivity.class);
+			break;
+		case 21://多线程断点续传
+			startActivity(MuiltipleDownLoadActivity.class);
+			break;
+		case 22://Xutils
+			startActivity(XutilsDownLoadActivity.class);
+			break;
+		case 23://Activty跳转
+			startActivity(StartActivityActivity.class);
+			break;
+		case 24://Activty传递数据
+			startActivity(StartActivityActivity.class);
+			break;
+		case 25://Activty生命周期
+			break;
+		case 26://Activty四种启动模式
+			break;
+		case 27://快速短信
+			startActivity(QuickSmsActivity.class);
+			break;
+		case 28://IP拨号器
+			startActivity(IpCallActivity.class);
+			break;
+		case 29://Activty四种启动模式
+			break;
+		case 33:
+			startActivity(SendBroadCastActivity.class);
+			break;
+		case 34:
+			startActivity(ServiceActivity.class);
+			break;
+		case 35:
+			startActivity(PhoneRecorderActivity.class);
+			break;
+		case 36:
+			startActivity(RegisteBroadCastActivity.class);
+			break;
+		case 37:
+			startActivity(RemoteServiceActivity.class);
+			break;
+		case 38:
+			startActivity(ImageLoadActivity.class);
+			break;
+		case 39:
+			startActivity(CopyImageActivity.class);
+			break;
+		case 40:
+			startActivity(PaintActivity.class);
+			break;
+		case 41:
+			startActivity(DrawClothesActivity.class);
+			break;
+		case 42:
+			startActivity(PlayMusicActivity.class);
+			break;
+		case 43:
+			startActivity(VideoActivity.class);
+			break;
+		case 44:
+			startActivity(CameraActivity.class);
+			break;
+		case 45:
+//			startActivity(CameraActivity2.class);
+			break;
+		case 46:
+			Toast.makeText(this, "详见MyContentProvider", 0).show();
+			break;
+		case 47:
+			startActivity(GetAllSmsActivity.class);
+			break;
+		case 48:
+			startActivity(GetAllContactsActivity.class);
+			break;
+		case 49:
+			startActivity(ContentObserveActivity.class);
 			break;
 		}
 	}
