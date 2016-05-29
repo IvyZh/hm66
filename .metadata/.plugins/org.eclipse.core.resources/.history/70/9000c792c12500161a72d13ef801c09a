@@ -1,0 +1,54 @@
+package com.ivy.hm66.activity;
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.View;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.fragment.Fragment01L;
+import com.ivy.hm66.fragment.Fragment02L;
+import com.ivy.hm66.fragment.Fragment03L;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class FragmentDemo02Activity extends FragmentActivity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_fragment);
+	}
+
+	public void click(View v) {
+		
+		FragmentManager fm = getSupportFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		Fragment01L fragment01l = new Fragment01L();
+		ft.replace(R.id.frame_id, fragment01l);
+		ft.commit();
+
+	}
+
+	public void click1(View v) {
+		FragmentManager fm = getSupportFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		Fragment02L fragment02l = new Fragment02L();
+		ft.replace(R.id.frame_id, fragment02l);
+		ft.commit();
+
+	}
+
+	public void click2(View v) {
+		FragmentManager fm = getSupportFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		Fragment03L fragment03l = new Fragment03L();
+		ft.replace(R.id.frame_id, fragment03l);
+		ft.commit();
+	}
+}

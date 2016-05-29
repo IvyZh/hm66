@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.app(Activity.class[Activity" modifiers="33" timestamp="1373508337000"/>
+<typeInfo handle="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.database.sqlite(SQLiteOpenHelper.class[SQLiteOpenHelper" modifiers="1057" timestamp="1373508337000"/>
+<typeInfo handle="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.test(AndroidTestCase.class[AndroidTestCase" modifiers="33" timestamp="1373508337000"/>
+<typeInfo handle="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.content(BroadcastReceiver.class[BroadcastReceiver" modifiers="1057" timestamp="1373508337000"/>
+<typeInfo handle="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.app(Service.class[Service" modifiers="1057" timestamp="1373508337000"/>
+<typeInfo handle="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.content(ContentProvider.class[ContentProvider" modifiers="1057" timestamp="1373508337000"/>
 </typeInfoHistroy>

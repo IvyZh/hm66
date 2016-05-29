@@ -1,0 +1,118 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.animation.ObjectAnimator;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class ObjectAnimationActivity extends Activity {
+	private View imageView1;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_tween);
+
+		imageView1 = findViewById(R.id.imageView1);
+		imageView1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(ObjectAnimationActivity.this, "hahah", 0).show();''
+			}
+		});
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+
+		ObjectAnimator oa = ObjectAnimator.ofFloat(imageView1, "translationX", 0,100);
+		oa.setDuration(2000);
+		oa.start();
+	}
+
+	public void click1(View v) {
+		System.out.println("click...");
+
+		RotateAnimation ra = new RotateAnimation(0, 360,
+				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+				0.5f);
+
+		ra.setDuration(2000);
+
+		ra.setFillAfter(false);
+
+		imageView1.setAnimation(ra);
+
+	}
+
+	public void click2(View v) {
+		System.out.println("click...");
+
+		ScaleAnimation sa = new ScaleAnimation(0.1f, 2, 0.2f, 2,
+				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+				0.5f);
+
+		sa.setDuration(2000);
+
+		sa.setFillAfter(false);
+
+		imageView1.setAnimation(sa);
+	}
+
+	public void click3(View v) {
+		System.out.println("click...");
+
+		AlphaAnimation aa = new AlphaAnimation(0.2f, 1.0f);
+
+		aa.setDuration(2000);
+
+		aa.setFillAfter(false);
+
+		imageView1.setAnimation(aa);
+
+	}
+
+	public void click4(View v) {
+		System.out.println("click...");
+
+		AnimationSet as = new AnimationSet(false);
+
+		AlphaAnimation aa = new AlphaAnimation(0.2f, 1.0f);
+
+		ScaleAnimation sa = new ScaleAnimation(0.1f, 2, 0.2f, 2,
+				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+				0.5f);
+		RotateAnimation ra = new RotateAnimation(0, 360,
+				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+				0.5f);
+
+		TranslateAnimation ta = new TranslateAnimation(
+				Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF,
+				2.0f, Animation.RELATIVE_TO_SELF, 0,
+				Animation.RELATIVE_TO_SELF, Animation.RELATIVE_TO_SELF);
+		as.addAnimation(aa);
+		as.addAnimation(sa);
+		as.addAnimation(ra);
+		as.addAnimation(ta);
+		ta.setDuration(5000);
+
+		imageView1.setAnimation(as);
+
+	}
+}

@@ -1,0 +1,35 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.activity.utils.FileUtil;
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class XutilsDownLoadActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_main);
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+		
+		HttpUtils httpUtils = new HttpUtils();
+		String path = "http://192.168.1.5/hello1/epp.exe";
+		httpUtils.download(path,new File(getCacheDir(),FileUtil.getNameFromPath(path)),true,true,new RequestCallBack<Strin>(){} {
+		})
+		
+	}
+}

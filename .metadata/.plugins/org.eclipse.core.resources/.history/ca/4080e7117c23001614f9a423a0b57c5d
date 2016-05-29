@@ -1,0 +1,110 @@
+package com.ivy.hm66.activity;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.domain.PhoneContact;
+
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class GetAllContactsActivity extends Activity {
+
+	private TextView tv;
+	private ArrayList<PhoneContact> contactList = new ArrayList<PhoneContact>();
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_aaa);
+		
+		tv = (TextView) findViewById(R.id.tv);
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+		
+		ContentResolver resolver = getContentResolver();
+		Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
+		
+		String[] projection = {"contact_id"};
+		Cursor cursor = resolver.query(uri, projection , null, null	, null);
+		while(cursor.moveToNext()){
+			String contact_id = cursor.getString(0);
+			System.out.println(contact_id);
+			Uri uri2 = Uri.parse("content://com.android.contacts/data");
+			String[] projection2 = {"mimetype","data1"};
+			Cursor cursor2 = resolver.query(uri2, projection2 , "contact_id = ?", new String[]{contact_id}	, null);
+			PhoneContact contact = new PhoneContact();
+			while(cursor2.moveToNext()){
+				
+				String mimetype = cursor2.getString(0);
+				String data1 = cursor2.getString(1);
+				
+				System.out.println(contact_id+"---"+mimetype+"---"+data1);
+				if("vnd.android.cursor.item/phone_v2".equals(mimetype)){
+					contact.setPhone(data1);
+				}else if("vnd.android.cursor.item/email_v2".equals(mimetype)){
+					contact.setEmail(data1);
+				}else if("vnd.android.cursor.item/name".equals(mimetype)){
+					contact.setName(data1);
+				}
+			}
+			contactList.add(contact);
+		}
+		
+		StringBuffer sb = new StringBuffer();
+		
+		for (PhoneContact contact : contactList) {
+			sb .append(contact.toString()).append("\n");
+		}
+		
+		tv.setText(sb.toString());
+//		05-26 19:41:53.600: I/System.out(5514): 2---vnd.android.cursor.item/phone_v2---1 14
+//		05-26 19:41:53.600: I/System.out(5514): 2---vnd.android.cursor.item/email_v2---xd@126.@com
+//		05-26 19:41:53.600: I/System.out(5514): 2---vnd.android.cursor.item/name---Yu
+
+	}
+	
+	public void click1(View v) {
+		
+		ContentResolver resolver = getContentResolver();
+		Uri uri = Uri.parse("content://com.android.contacts/raw_contacts");
+		
+		String[] projection = {"contact_id"};
+		Cursor cursor = resolver.query(uri, projection , null, null	, null);
+		int index = 0;
+		if(cursor.moveToLast()){
+			index = Integer.valueOf(cursor.getString(0));
+		}
+		
+		index++;
+		ContentValues values = new ContentValues();
+		values.put("contact_id", index);
+		resolver.insert(uri, values);
+		
+		
+		Uri uri2 = Uri.parse("content://com.android.contacts/data");
+		
+		ContentValues valuesPhone = new ContentValues();
+		values.put("vnd.android.cursor.item/phone_v2", 187681123+new Random().nextInt(100));
+		resolver.insert(uri2, valuesPhone);
+		
+		ContentValues valuesEmail = new ContentValues();
+		values.put("vnd.android.cursor.item/email_v2", new Random().nextInt(100)+"@163.com");
+		resolver.insert(uri2, valuesEmail);
+		
+	}
+}

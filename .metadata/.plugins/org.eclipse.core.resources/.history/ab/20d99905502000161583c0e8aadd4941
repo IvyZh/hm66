@@ -1,0 +1,5 @@
+package com.ivy.hm66.activity.domain;
+
+public class News {
+
+}

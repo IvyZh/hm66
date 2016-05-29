@@ -1,0 +1,52 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.MainActivity;
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class CopyImageActivity extends Activity {
+
+	private ImageView iv1;
+	private ImageView iv2;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_copy);
+		iv1 = (ImageView) findViewById(R.id.iv1);
+		iv2 = (ImageView) findViewById(R.id.iv2);
+	}
+
+	public void click(View v) {
+		Bitmap bitmap = BitmapFactory.decodeFile("sdcard/1.jpg");
+		iv1.setImageBitmap(bitmap);
+		
+		Bitmap copyBitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(),bitmap.getConfig());
+		
+		Canvas canvas = new Canvas(copyBitmap);
+		
+		Paint paint = new Paint();
+		
+		Matrix matrix = new Matrix();
+		canvas.drawBitmap(copyBitmap, matrix, paint);
+		
+		iv2.setImageBitmap(copyBitmap);
+		
+		
+	}
+}

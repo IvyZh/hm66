@@ -1,0 +1,119 @@
+1463936665927	Copy compilation unit
+1463937065554	Copy file
+1463940820397	Copy compilation unit
+1463940966141	Copy file
+1463941214690	Rename type 'SmartImageViewctivity'
+1463941549587	Copy compilation unit
+1463941651247	Copy file
+1463943650474	Copy compilation unit
+1463943697723	Copy file
+1463944106055	Rename resource 'item_listview.xml'
+1464029906764	Copy compilation unit
+1464031512760	Copy compilation unit
+1464031852158	Delete element
+1464185052153	Copy compilation unit
+1464185086277	Copy file
+1464185250464	Copy file
+1464186356866	Copy compilation unit
+1464195683679	Copy compilation unit
+1464195752331	Copy file
+1464196515444	Convert local variable 'pb' to field
+1464196844444	Convert local variable 'tv' to field
+1464197134602	Convert local variable 'sp' to field
+1464197137553	Convert local variable 'edit' to field
+1464199314916	Copy compilation unit
+1464199782643	Copy file
+1464200192955	Copy compilation unit
+1464200224881	Copy file
+1464200600754	Copy file
+1464200607271	Copy compilation unit
+1464201707838	Copy compilation unit
+1464201771672	Copy file
+1464201918188	Rename field 'button1'
+1464201941813	Rename field 'button2'
+1464201963591	Rename field 'button3'
+1464201999233	Rename field 'editText1'
+1464202014614	Rename field 'editText2'
+1464202375086	Copy compilation unit
+1464202550237	Copy file
+1464203107249	Convert local variable 'etUserName' to field
+1464203109728	Convert local variable 'etContext' to field
+1464203311906	Copy compilation unit
+1464203611977	Copy compilation unit
+1464204527619	Rename package 'com.ivy.hm66.activity.utils'
+1464204538501	Rename package 'com.ivy.hm66.activity.domain'
+1464204545044	Rename package 'com.ivy.hm66.activity.cons'
+1464244331292	Copy compilation unit
+1464244365453	Copy file
+1464244839547	Copy compilation unit
+1464244844429	Copy compilation unit
+1464246244894	Copy compilation unit
+1464246288527	Copy file
+1464246809454	Convert local variable 'intent' to field
+1464246979902	Copy compilation unit
+1464247188397	Copy compilation unit
+1464251691886	Extract method 'prepareRecorder'
+1464255366554	Convert local variable 'conn' to field
+1464256909351	Convert local variable 'myIBinder' to field
+1464258483057	Copy compilation unit
+1464258569840	Copy file
+1464258905984	Convert local variable 'receiver' to field
+1464259926144	Copy compilation unit
+1464260101872	Copy file
+1464261355675	Convert local variable 'conn' to field
+1464261402357	Convert local variable 'aliPay' to field
+1464261824257	Copy compilation unit
+1464261851517	Copy file
+1464263311608	Convert local variable 'iv' to field
+1464267383110	Copy compilation unit
+1464267494634	Copy file
+1464267643384	Convert local variable 'iv1' to field
+1464267645538	Convert local variable 'iv2' to field
+1464268431386	Rename local variable 'bitmap'
+1464269276123	Copy compilation unit
+1464269308246	Copy file
+1464269596115	Convert local variable 'iv' to field
+1464270091653	Convert local variable 'startX' to field
+1464270094202	Convert local variable 'startY' to field
+1464270612346	Convert local variable 'canvas' to field
+1464270616259	Convert local variable 'paint' to field
+1464270755929	Convert local variable 'bitmap' to field
+1464270968138	Convert local variable 'copyBitmap' to field
+1464271401016	Extract method 'reset'
+1464271641032	Copy compilation unit
+1464271686358	Copy file
+1464271756059	Rename resource 'aneiyi.jpg'
+1464271766044	Rename resource 'awaiyi.jpg'
+1464272097623	Convert local variable 'startX' to field
+1464272100221	Convert local variable 'startY' to field
+1464272198614	Convert local variable 'bitmap' to field
+1464272209184	Convert local variable 'iv2' to field
+1464272883034	Copy compilation unit
+1464272910141	Copy file
+1464273956236	Convert local variable 'player' to field
+1464274115686	Convert local variable 'controller' to field
+1464274129489	Convert local variable 'conn' to field
+1464274260570	Extract method 'prepare'
+1464275161720	Convert local variable 'intent' to field
+1464277344632	Extract method 'prepareMusice'
+1464278238295	Convert local variable 'sb' to field
+1464278979024	Convert local variable 'task' to field
+1464278980871	Convert local variable 'timer' to field
+1464279392343	Extract method 'prepareTimer'
+1464281210365	Copy compilation unit
+1464281257109	Copy file
+1464281606929	Convert local variable 'player' to field
+1464281884057	Convert local variable 'holder' to field
+1464282253852	Convert local variable 'vv' to field
+1464282314300	Copy compilation unit
+1464282412756	Copy file
+1464283112798	Convert local variable 'iv' to field
+1464285051356	Copy compilation unit
+1464285062362	Delete element
+1464285199480	Rename package 'com.ivy.hm66.activity.test'
+1464285423132	Convert local variable 'db' to field
+1464289433692	Copy compilation unit
+1464289771817	Convert local variable 'tv' to field
+1464290788822	Copy file
+1464290836793	Copy compilation unit
+1464293494142	Copy compilation unit

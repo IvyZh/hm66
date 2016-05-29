@@ -1,0 +1,30 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+/**
+ * 演示 发送广播 界面
+ * 
+ * @author Ivy
+ */
+public class SendBroadCastActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_sendbroadcast);
+	}
+
+	public void click1(View v) {
+		System.out.println("click...");
+	}
+	
+	public void click2(View v) {
+		System.out.println("click...");
+	}
+}

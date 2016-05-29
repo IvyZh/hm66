@@ -1,0 +1,44 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class JNIActivity extends Activity {
+
+	static {
+		System.loadLibrary("hello");
+	}
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_jni);
+	}
+
+	public void click1(View v) {
+
+		Toast.makeText(this, fromC(), 0).show();
+	}
+
+	
+	public void click2(View v) {
+
+		Toast.makeText(this, add(3,5), 0).show();
+	}
+	
+	
+	
+	
+	
+	public native String fromC();
+	
+}

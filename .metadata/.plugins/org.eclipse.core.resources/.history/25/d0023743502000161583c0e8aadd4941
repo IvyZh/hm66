@@ -1,0 +1,13 @@
+package com.ivy.hm66.activity.domain;
+
+/**
+ * 新闻的业务Bean
+ */
+public class News {
+	
+	private String title;
+	private String detail;
+	private String imageUrl;
+	private String comments;
+
+}

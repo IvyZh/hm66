@@ -1,0 +1,6 @@
+package com.ivy.hm66.activity.cons;
+
+public class Constant {
+
+	public static final String  HOST= "";
+}

@@ -1,0 +1,36 @@
+package com.ivy.hm66.fragment;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.log.L;
+
+public class Fragment02L extends Fragment {
+	private TextView tv;
+
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.activity_fragment02, null);
+		tv = (TextView) view.findViewById(R.id.textView1);
+		L.v("--Fragment02L--onCreateView: "+(tv==null));
+		return view;
+	}
+	
+	
+	public void setText(String text){
+		if(tv==null){
+			L.v("---null---");
+		}else{
+			L.v("--no null--");
+			tv.setText(text);
+			
+		}
+	}
+}

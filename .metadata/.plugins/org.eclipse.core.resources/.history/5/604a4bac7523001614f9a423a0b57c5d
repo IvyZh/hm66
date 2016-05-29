@@ -1,0 +1,31 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class GetAllSmsActivity extends Activity {
+
+	private TextView tv;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_aa);
+		
+		tv = (TextView) findViewById(R.id.tv);
+	}
+
+	public void click(View v) {
+		
+	}
+}

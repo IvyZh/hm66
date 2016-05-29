@@ -1,0 +1,6 @@
+package com.ivy.hm66.interfaces;
+
+public interface MusicController {
+	void play();
+	void stop();
+}

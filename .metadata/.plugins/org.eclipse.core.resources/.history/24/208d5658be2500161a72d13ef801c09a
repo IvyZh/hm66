@@ -1,0 +1,15 @@
+package com.ivy.hm66.log;
+
+import android.util.Log;
+
+public class L {
+
+	private static final String tag = "IVY";
+	private boolean flag = true;
+
+	public static void v(String msg) {
+		if (flag)
+			Log.v(tag, msg);
+	}
+
+}

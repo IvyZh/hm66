@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <jni.h>
+
+jint Java_com_ivy_hm66_activity_JNIActivity_add(JNIEnv* env,jobject thiz,jint a,jint b){
+	return a +b;
+}

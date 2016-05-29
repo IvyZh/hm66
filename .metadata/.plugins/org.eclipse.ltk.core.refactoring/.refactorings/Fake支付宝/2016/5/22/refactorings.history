@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AliPay.aidl&apos; to &apos;黑马项目/src/com.ivy.alipay.service&apos;&#x0D;&#x0A;- Original project: &apos;Fake支付宝&apos;&#x0D;&#x0A;- Destination element: &apos;黑马项目/src/com.ivy.alipay.service&apos;&#x0D;&#x0A;- Original element: &apos;AliPay.aidl&apos;" description="Copy file" destination="=黑马项目/src&lt;com.ivy.alipay.service" element1="src/com/ivy/alipay/service/AliPay.aidl" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1464261041476" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+jstring Java_com_ivy_hm66_activity_JNIActivity_fromC(JNIEnv* env,jobject thiz){
+
+}

@@ -1,0 +1,57 @@
+package com.ivy.hm66.provider;
+
+import com.ivy.hm66.db.MyOpenHelper;
+
+import android.content.ContentProvider;
+import android.content.ContentValues;
+import android.content.UriMatcher;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
+
+public class MyContentProvider extends ContentProvider {
+
+	private SQLiteDatabase db;
+	private String authority = "com.ivy.hm66.provider";
+	private UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
+	{
+		matcher.addURI(authority, "person", 0);
+	}
+
+	@Override
+	public boolean onCreate() {
+		
+		MyOpenHelper openHelper = new MyOpenHelper(getContext());
+		db = openHelper.getWritableDatabase();
+		
+		return false;
+	}
+
+	@Override
+	public Cursor query(Uri uri, String[] projection, String selection,
+			String[] selectionArgs, String sortOrder) {
+		return db.q;
+	}
+
+	@Override
+	public String getType(Uri uri) {
+		return null;
+	}
+
+	@Override
+	public Uri insert(Uri uri, ContentValues values) {
+		return db.insert(table, nullColumnHack, values);
+	}
+
+	@Override
+	public int delete(Uri uri, String selection, String[] selectionArgs) {
+		return 0;
+	}
+
+	@Override
+	public int update(Uri uri, ContentValues values, String selection,
+			String[] selectionArgs) {
+		return 0;
+	}
+
+}

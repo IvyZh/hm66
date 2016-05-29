@@ -1,0 +1,50 @@
+package com.ivy.hm66.service;
+
+import java.io.File;
+import java.io.IOException;
+
+import android.app.Service;
+import android.content.Intent;
+import android.media.MediaRecorder;
+import android.os.IBinder;
+import android.telephony.TelephonyManager;
+
+public class PhoneRecorderService extends Service {
+
+	private MediaRecorder mRecorder;
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		return null;
+	}
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		System.out.println("--服务创建了--onCreate");
+		
+		TelephonyManager tm = getSystemService(TELEPHONY_SERVICE);
+		
+		mRecorder = new MediaRecorder();         
+		mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);         
+		mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP); 
+		File file = new File(getCacheDir(),"1.3gp");
+		mRecorder.setOutputFile(file.getAbsolutePath());        
+		mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);   
+		
+		
+	}
+	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		System.out.println("--服务销毁了--onDestroy");
+	}
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		System.out.println("--服务开始了--onStartCommand");
+		return super.onStartCommand(intent, flags, startId);
+		
+	}
+}

@@ -2,16 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="total a" key="selection"/>
+		<item value="getContentResolver" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="total a"/>
-			<item value="total"/>
-			<item value="size"/>
-			<item value="memory_size"/>
+			<item value="getContentResolver"/>
+			<item value="prepareTimer"/>
+			<item value="Prepare"/>
+			<item value="prepare"/>
+			<item value="MyServiceConnection"/>
+			<item value="MyThread"/>
+			<item value="compeleteCount"/>
+			<item value="beginTime"/>
 		</list>
 		<list key="replacehistory">
 		</list>

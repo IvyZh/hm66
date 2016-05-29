@@ -1,0 +1,85 @@
+package com.ivy.hm66.service;
+
+import java.io.File;
+
+import android.app.Service;
+import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.os.Binder;
+import android.os.Environment;
+import android.os.IBinder;
+
+import com.ivy.hm66.interfaces.MusicController;
+
+public class MusicService extends Service {
+
+	private MediaPlayer player;
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		return new MyBinder();
+	}
+	
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		System.out.println("音乐服务已经创建....");
+		player = new MediaPlayer();
+		try {
+			player.setDataSource(new File(Environment.getExternalStorageDirectory().getAbsoluteFile(),"zdmx").getAbsolutePath());
+			player.setAudioStreamType(AudioManager.STREAM_MUSIC); 
+			player.prepare();
+			int duration = player.getDuration();
+			System.out.println("时长："+duration);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		System.out.println("----onStartCommand--");
+		return super.onStartCommand(intent, flags, startId);
+	}
+	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		System.out.println("----onDestroy--");
+		if(player!=null){
+			player.release();
+			player = null;
+		}
+	}
+
+	class MyBinder extends Binder implements MusicController{
+
+		@Override
+		public void play() {
+			if(player!=null){
+				System.out.println("----开始播放音乐---");
+				player.start();
+				
+			}
+		}
+
+		@Override
+		public void stop() {
+			if(player!=null){
+				player.stop();
+				player.release();
+				player = null;
+			}
+		}
+
+		@Override
+		public void pause() {
+			if(player!=null){
+				player.pause();
+			}
+		}
+		
+	}
+}

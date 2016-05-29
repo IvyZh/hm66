@@ -1,0 +1,26 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * @author Ivy
+ */
+public class NetImageActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.activity_netimage);
+	}
+	
+	
+	public void click(View v){
+		String path = "http://192.168.5.9/hello1/1.jpg";
+		System.out.println(path);
+	}
+}

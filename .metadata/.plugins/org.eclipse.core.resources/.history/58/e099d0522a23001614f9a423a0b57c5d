@@ -1,0 +1,5 @@
+package com.ivy.hm66.interfaces;
+
+interface PublicBusiness {
+	void pay(int money);
+}

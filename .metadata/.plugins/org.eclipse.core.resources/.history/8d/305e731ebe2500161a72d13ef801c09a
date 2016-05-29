@@ -1,0 +1,10 @@
+package com.ivy.hm66.log;
+
+import android.util.Log;
+
+public class L {
+
+	public static void v(String msg){
+		Log.v(tag, msg);
+	}
+}

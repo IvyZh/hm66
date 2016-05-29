@@ -1,0 +1,5 @@
+package com.ivy.alipay.service;
+
+public interface AliPay {
+	void pay(int money);
+}

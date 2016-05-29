@@ -1,0 +1,55 @@
+package com.ivy.hm66.activity;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+
+import com.ivy.hm66.R;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class TweenActivity extends Activity {
+
+	private View imageView1;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_tween);
+		
+		imageView1 = findViewById(R.id.imageView1);
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+		
+		TranslateAnimation ta = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 2.0f, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, Animation.RELATIVE_TO_SELF);
+		
+		ta.setDuration(2000);
+		
+		ta.setFillAfter(false);
+		
+		imageView1.setAnimation(ta);
+		
+	}
+	public void click1(View v) {
+		System.out.println("click...");
+		
+		ScaleAnimation sa = new ScaleAnimation(0, 360, 0, 0, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+	}
+	public void click2(View v) {
+		System.out.println("click...");
+	}
+	public void click3(View v) {
+		System.out.println("click...");
+	}
+	public void click4(View v) {
+		System.out.println("click...");
+	}
+}

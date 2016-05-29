@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ivy.hm66"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.ivy.hm66" >
+    </instrumentation>
+
+    <!-- 权限 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 权限 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <!-- ===============================Activity==================================== -->
+        <activity
+            android:name="com.ivy.hm66.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ivy.hm66.activity.CallDemoActivity" >
+        </activity>
+        <activity android:name="com.ivy.hm66.activity.ButtonClickActivity" />
+        <activity android:name="com.ivy.hm66.activity.SendSMSActivity" />
+        <activity android:name="com.ivy.hm66.activity.LinearLayoutActivity" />
+        <activity android:name="com.ivy.hm66.activity.RWinRomActivity" />
+        <activity android:name="com.ivy.hm66.activity.RWinSDCardActivity" />
+        <activity android:name="com.ivy.hm66.activity.SDCardStorageActivity" />
+        <activity android:name="com.ivy.hm66.activity.SharedPreferenceActivity" />
+        <activity android:name="com.ivy.hm66.activity.CreateXMLActivity" />
+        <activity android:name="com.ivy.hm66.activity.PullXmlActivity" />
+        <activity android:name="com.ivy.hm66.activity.ShowDataActivity" />
+        <activity android:name="com.ivy.hm66.activity.ShowDataActivity2" />
+        <activity android:name="com.ivy.hm66.activity.ArraySimpleAdapterActivity" />
+        <activity android:name="com.ivy.hm66.activity.NetImageActivity" />
+        <activity android:name="com.ivy.hm66.activity.SmartImageViewActivity" />
+        <activity android:name="com.ivy.hm66.activity.HtmlWatcherActivity" />
+        <activity android:name="com.ivy.hm66.activity.NewsActivity" />
+        <activity android:name="com.ivy.hm66.activity.HttpClientActivity" />
+        <activity android:name="com.ivy.hm66.activity.AsyncHttpActivity" />
+        <activity android:name="com.ivy.hm66.activity.GetMethodActivity" />
+        <activity android:name="com.ivy.hm66.activity.PostMethodActivity" />
+        <activity android:name="com.ivy.hm66.activity.MuiltipleDownLoadActivity" />
+        <activity android:name="com.ivy.hm66.activity.XutilsDownLoadActivity" />
+        <activity android:name="com.ivy.hm66.activity.StartActivityActivity" />
+        <activity android:name="com.ivy.hm66.activity.OtherActivity" >
+            <intent-filter>
+                <action android:name="a.b.c" />
+
+                <data android:scheme="ivy" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ivy.hm66.activity.QuickSmsActivity" />
+        <activity android:name="com.ivy.hm66.activity.ContactsActivity" />
+        <activity android:name="com.ivy.hm66.activity.SmsTempletActivity" />
+        <activity android:name="com.ivy.hm66.activity.IpCallActivity" />
+        <activity android:name="com.ivy.hm66.activity.SendBroadCastActivity" />
+        <activity android:name="com.ivy.hm66.activity.ServiceActivity" />
+        <activity android:name="com.ivy.hm66.activity.PhoneRecorderActivity" />
+        <!-- ===============================Activity==================================== -->
+
+
+        <!-- ===============================广播接受者==================================== -->
+        <receiver android:name="com.ivy.hm66.broadcast.IpCallBroadCast" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ivy.hm66.broadcast.SmsShieldBroadCast" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ivy.hm66.broadcast.SDCardStatusBroadCast" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ivy.hm66.broadcast.AppStatusBroadCast" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ivy.hm66.broadcast.BootCompleteBroadc" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ivy.hm66.broadcast.ALevelBroadCast" >
+            <intent-filter android:priority="1000" >
+                <action android:name="b.a.b.c" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ivy.hm66.broadcast.BLevelBroadCast" >
+            <intent-filter android:priority="500" >
+                <action android:name="b.a.b.c" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ivy.hm66.broadcast.CLevelBroadCast" >
+            <intent-filter android:priority="300" >
+                <action android:name="b.a.b.c" />
+            </intent-filter>
+        </receiver>
+        <!-- ===============================广播接受者==================================== -->
+
+
+        <!-- ===============================服务==================================== -->
+        <service android:name="com.ivy.hm66.service.MyService" />
+        <!-- ===============================服务==================================== -->
+    </application>
+
+</manifest>

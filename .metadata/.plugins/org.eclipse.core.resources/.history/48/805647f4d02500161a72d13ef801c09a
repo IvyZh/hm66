@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <jni.h>
+jstring Java_com_ivy_hm66_activity_JNIActivity_fromC(JNIEnv* env,jobject thiz){
+	char * cstr = "this is hello from C!";
+	jstring jstr = (*env)->NewStringUTF(env,cstr);
+	return jstr;
+}

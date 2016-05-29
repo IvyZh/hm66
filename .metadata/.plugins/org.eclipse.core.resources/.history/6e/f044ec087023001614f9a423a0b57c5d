@@ -1,0 +1,73 @@
+package com.ivy.alipay;
+
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends Activity {
+	String authority = "content://com.ivy.hm66.provider";
+	Uri uri = Uri.parse(authority);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	//add
+	public void click1(View v) {
+		ContentResolver resolver = getContentResolver();
+		
+		ContentValues values = new ContentValues();
+		values.put("name", "小李");
+		values.put("phone", "13818721");
+		values.put("salary", "6000");
+		
+		resolver.insert(uri, values);
+	}
+
+	//delete
+	public void click2(View v) {
+		ContentResolver resolver = getContentResolver();
+		
+		resolver.delete(uri, "name = ?", new String[]{"张33"});
+
+	}
+
+	//update
+	public void click3(View v) {
+
+		ContentResolver resolver = getContentResolver();
+		ContentValues values = new ContentValues();
+		values.put("phone", "123456");
+		resolver.update(uri, values, "name = ?", new String[]{"张34"});
+	}
+
+	//query
+	public void click4(View v) {
+		ContentResolver resolver = getContentResolver();
+		ContentValues values = new ContentValues();
+		values.put("phone", "123456");
+		Cursor cursor = resolver.query(uri, null, "name = ?", new String[]{"张34"}, null);
+		if(cursor.moveToFirst()){
+			String name = cursor.getString(cursor.getColumnIndex("name"));
+			String phone = cursor.getString(cursor.getColumnIndex("phone"));
+			String salary = cursor.getString(cursor.getColumnIndex("salary"));
+			System.out.println(name+"---"+phone+"=="+salary);
+		}
+	}
+	
+	
+	
+	public void click5(View v) {
+		
+	}
+	
+	public void click6(View v) {
+		
+	}
+	
+}

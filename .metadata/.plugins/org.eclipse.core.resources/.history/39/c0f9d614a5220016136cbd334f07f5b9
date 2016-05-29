@@ -1,0 +1,29 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class StartActivityActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_startactivity);
+	}
+
+	public void click1(View v) {
+		System.out.println("click...");
+		Intent intent = new Intent(this,CallDemoActivity.class);
+		startActivity(intent)l;
+	}
+}

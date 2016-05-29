@@ -1,0 +1,39 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+/**
+ * 演示 Get方式提交数据 界面
+ * 
+ * @author Ivy
+ */
+public class GetMethodActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_getmethod);
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+		
+		EditText etUserName = (EditText) findViewById(R.id.et_username);
+		EditText etPwd = (EditText) findViewById(R.id.et_pwd);
+		
+		String username = etUserName.getText().toString().trim();
+		String pwd = etPwd.getText().toString().trim();
+		
+		
+		
+		
+		
+		
+	}
+}

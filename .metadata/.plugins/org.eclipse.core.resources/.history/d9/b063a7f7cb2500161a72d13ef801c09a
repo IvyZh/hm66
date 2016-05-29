@@ -1,0 +1,99 @@
+package com.ivy.hm66.activity;
+
+import android.animation.ObjectAnimator;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
+
+import com.ivy.hm66.R;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class ObjectAnimationActivity extends Activity {
+	private View imageView1;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_tween);
+
+		imageView1 = findViewById(R.id.imageView1);
+		imageView1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(ObjectAnimationActivity.this, "hahah", 0).show();
+			}
+		});
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+
+		ObjectAnimator oa = ObjectAnimator.ofFloat(imageView1, "translationX", 0,100);
+		oa.setDuration(2000);
+		oa.start();
+	}
+
+	public void click1(View v) {
+		ObjectAnimator oa = ObjectAnimator.ofFloat(imageView1, "rotation", 0,100);
+		oa.setDuration(2000);
+		oa.start();
+
+	}
+
+	public void click2(View v) {
+		System.out.println("click...");
+		ObjectAnimator oa = ObjectAnimator.ofFloat(imageView1, "scaleY", 0,100);
+		oa.setDuration(2000);
+		oa.start();
+		
+	}
+
+	public void click3(View v) {
+		ObjectAnimator oa = ObjectAnimator.ofFloat(imageView1, "alpha", 0.1f,1);
+		oa.setDuration(2000);
+		oa.start();
+
+	}
+
+	public void click4(View v) {
+		System.out.println("click...");
+
+		AnimationSet as = new AnimationSet(false);
+
+		AlphaAnimation aa = new AlphaAnimation(0.2f, 1.0f);
+
+		ScaleAnimation sa = new ScaleAnimation(0.1f, 2, 0.2f, 2,
+				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+				0.5f);
+		RotateAnimation ra = new RotateAnimation(0, 360,
+				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+				0.5f);
+
+		TranslateAnimation ta = new TranslateAnimation(
+				Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF,
+				2.0f, Animation.RELATIVE_TO_SELF, 0,
+				Animation.RELATIVE_TO_SELF, Animation.RELATIVE_TO_SELF);
+		as.addAnimation(aa);
+		as.addAnimation(sa);
+		as.addAnimation(ra);
+		as.addAnimation(ta);
+		ta.setDuration(5000);
+
+		imageView1.setAnimation(as);
+
+	}
+}

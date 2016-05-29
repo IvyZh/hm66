@@ -1,0 +1,8 @@
+package com.ivy.hm66.domain;
+
+public class PhoneContact {
+	private String name;
+	private String email;
+	private String phone;
+
+}

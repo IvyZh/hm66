@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <jni.h>
+jstring Java_com_ivy_hm66_activity_JNIActivity_fromC(JNIEnv* env,jobject thiz){
+	char * cstr = "this is hello from C哈哈!";
+	jstring jstr = (*env)->NewStringUTF(env,cstr);
+	return jstr;
+}
+
+
+jint Java_com_ivy_hm66_activity_JNIActivity_add(JNIEnv* env,jobject thiz,jint a,jint b){
+	return a +b;
+}
+
+
+jstring Java_com_ivy_hm66_activity_JNIActivity_decode(JNIEnv* env,jobject thiz){
+	char * cstr = "this is hello from C哈哈!";
+	jstring jstr = (*env)->NewStringUTF(env,cstr);
+	return jstr;
+}

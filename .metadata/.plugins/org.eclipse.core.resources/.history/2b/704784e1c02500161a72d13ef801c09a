@@ -1,0 +1,12 @@
+package com.ivy.hm66.fragment;
+
+
+import com.ivy.hm66.R;
+
+ public class Fragment01L extends android.support.v4.app.Fragment {
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		return inflater.inflate(R.layout.activity_fragment01, null);
+	}
+}

@@ -1,0 +1,26 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+/**
+ * 演示 Get方式提交数据 界面
+ * 
+ * @author Ivy
+ */
+public class GetMethodActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_getmethod);
+	}
+
+	public void click(View v) {
+
+	}
+}

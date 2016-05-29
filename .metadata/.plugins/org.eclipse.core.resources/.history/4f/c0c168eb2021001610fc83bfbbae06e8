@@ -1,0 +1,12 @@
+package com.ivy.hm66.activity.test;
+
+import android.test.AndroidTestCase;
+
+public class TestDownload extends AndroidTestCase {
+	
+	
+	public void testDown(){
+		System.out.println("Java°æÏÂÔØ´úÂë...");
+	}
+
+}

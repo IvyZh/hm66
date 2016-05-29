@@ -1,0 +1,190 @@
+package com.ivy.hm66.activity;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.RandomAccessFile;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import javax.crypto.interfaces.PBEKey;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.ivy.hm66.R;
+import com.ivy.hm66.activity.utils.FileUtil;
+
+/**
+ * 演示多线程断点下载 界面
+ * 
+ * @author Ivy
+ */
+public class MuiltipleDownLoadActivity extends Activity {
+	private static int threadCount = 3;
+	private static int compeleteCount=0;
+	private ProgressBar pb;
+	private int pbProcess = 0;
+	private TextView tv;
+	
+	private Handler handler = new Handler(){
+		
+		public void handleMessage(android.os.Message msg) {
+			int max = pb.getMax();
+			int progress = pb.getProgress();
+			tv.setText(progress *100 / max + " %");
+			
+		};
+	};
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_muiltiple);
+		pb = (ProgressBar) findViewById(R.id.pb);
+		tv = (TextView) findViewById(R.id.tv);
+	}
+
+	public void click(View v) {
+		System.out.println("click...");
+
+		new Thread(new Runnable() {
+
+			public void run() {
+				String path = "http://192.168.1.5/hello1/epp.exe";
+				try {
+					URL url = new URL(path);
+					HttpURLConnection conn = (HttpURLConnection) url
+							.openConnection();
+					conn.setRequestMethod("GET");
+
+					conn.setReadTimeout(8000);
+					conn.setConnectTimeout(8000);
+					File file = new File(getCacheDir(),	FileUtil.getNameFromPath(path));
+					if (conn.getResponseCode() == 200) {
+						RandomAccessFile raf = new RandomAccessFile(file, "rwd");
+
+						int length = conn.getContentLength();// 文件长度
+
+						raf.setLength(length);
+						raf.close();
+						System.out.println("-----length----" + length);
+						pb.setMax(length);
+
+						// 根据
+						for (int i = 0; i < threadCount; i++) {
+							long startIndex = i * length / 3;
+							long endIndex = (i + 1) * length / 3 - 1;
+							if (i == threadCount) {
+								endIndex = length;
+							}
+
+							MyThread thread = new MyThread(startIndex,
+									endIndex, i);
+							thread.start();
+
+						}
+
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+		}).start();
+
+	}
+	class MyThread extends Thread {
+		private final int threadId;
+		private final long endIndex;
+		private final long startIndex;
+		
+
+		MyThread(long startIndex, long endIndex, int threadId) {
+			this.startIndex = startIndex;
+			this.endIndex = endIndex;
+			this.threadId = threadId;
+		}
+
+		public void run() {
+			System.out
+					.println("Num" + threadId + ":" + startIndex + "~" + endIndex);
+			down(startIndex, endIndex, threadId);
+		}
+
+		public  void down(long startIndex, long endIndex, int threadId) {
+
+			
+			String path = "http://192.168.1.5/hello1/epp.exe";
+			try {
+				File file = new File(getCacheDir(),threadId+".txt");
+				if(file.exists()){
+					FileInputStream fis = new FileInputStream(file);
+					BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+					String startProcess = br.readLine();
+					startIndex = Long.valueOf(startProcess).longValue();
+					System.out.println(threadId+"=====断点开始:"+startIndex);
+					fis.close();
+				}
+				
+				
+				URL url = new URL(path);
+				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+				conn.setRequestMethod("GET");
+
+				conn.setReadTimeout(8000);
+				conn.setConnectTimeout(8000);
+
+				conn.setRequestProperty("Range", "bytes=" + startIndex + "-"
+						+ endIndex);
+				if (conn.getResponseCode() == 206) {
+					RandomAccessFile raf = new RandomAccessFile(new File(getCacheDir(),
+							FileUtil.getNameFromPath(path)), "rwd");
+					raf.seek(startIndex);
+					
+
+					InputStream is = conn.getInputStream();
+					int total = 0;
+					int len = 0;
+					byte[] b = new byte[1024];
+					while ((len = is.read(b)) != -1) {
+//						Thread.sleep(10);
+						raf.write(b, 0, len);
+						total += len;
+						System.out.println(threadId + "--" + total);
+						FileOutputStream fos = new FileOutputStream(new File(getCacheDir(),threadId+".txt"));
+						fos.write(((total+startIndex)+"").getBytes());
+						fos.close();
+						pbProcess +=len;
+						pb.setProgress(pbProcess);
+						handler.sendEmptyMessage(1);
+					}
+
+					raf.close();
+
+					System.out.println(threadId + "-----end----");
+					compeleteCount ++;
+					if(compeleteCount==3){
+						System.out.println("全部完成，删除文件");
+						for (int i = 0; i <3; i++) {
+							new File(getCacheDir(),i+".txt").delete();
+						}
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+}
+

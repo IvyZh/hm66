@@ -1,0 +1,74 @@
+package com.ivy.hm66.service;
+
+import java.io.File;
+import java.io.IOException;
+
+import android.app.Service;
+import android.content.Intent;
+import android.media.MediaRecorder;
+import android.os.IBinder;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
+
+public class PhoneRecorderService extends Service {
+
+	private MediaRecorder mRecorder;
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		return null;
+	}
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		System.out.println("--监听服务创建了--onCreate");
+
+		TelephonyManager tm = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+		tm.listen(new MyPhoneStateListener(),
+				PhoneStateListener.LISTEN_CALL_STATE);
+
+		// mRecorder = new MediaRecorder();
+		// mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+		// mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+		// File file = new File(getCacheDir(),"1.3gp");
+		// mRecorder.setOutputFile(file.getAbsolutePath());
+		// mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+
+	}
+
+	class MyPhoneStateListener extends PhoneStateListener {
+
+		@Override
+		public void onCallStateChanged(int state, String incomingNumber) {
+			System.out.println(incomingNumber + "---" + state);
+			switch (state) {
+			case TelephonyManager.CALL_STATE_IDLE:
+				System.out.println("电话接听了");
+				break;
+			case TelephonyManager.CALL_STATE_OFFHOOK:
+				System.out.println("电话空闲了");
+				break;
+			case TelephonyManager.CALL_STATE_RINGING:
+				System.out.println("电话铃响了");
+				break;
+
+			}
+
+		}
+
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		System.out.println("--服务销毁了--onDestroy");
+	}
+
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		System.out.println("--服务开始了--onStartCommand");
+		return super.onStartCommand(intent, flags, startId);
+
+	}
+}

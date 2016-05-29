@@ -1,0 +1,38 @@
+package com.ivy.hm66.activity;
+
+import com.ivy.hm66.R;
+
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+/**
+ * —› æ XXX ΩÁ√Ê
+ * 
+ * @author Ivy
+ */
+public class GetAllSmsActivity extends Activity {
+
+	private TextView tv;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.activity_aa);
+		
+		tv = (TextView) findViewById(R.id.tv);
+	}
+
+	public void click(View v) {
+		ContentResolver resolver = getContentResolver();
+		Uri uri = Uri.parse("content://sms");
+		resolver.query(uri, projection, selection, selectionArgs, sortOrder)
+		String[] projection = new Sting{"address","body","type"};
+		resolver.query(uri, , null, null, null);
+		
+	}
+}

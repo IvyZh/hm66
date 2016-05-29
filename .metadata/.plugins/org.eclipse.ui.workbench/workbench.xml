@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="12" version="2.0">
 <workbenchAdvisor/>
-<window height="686" maximized="true" width="1024" x="254" y="45">
+<window height="686" maximized="true" width="1024" x="266" y="6">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="100"/>
@@ -13,20 +13,22 @@
 <coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="adt.actionSet.lint" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="135" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="78" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="78" y="22"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -35,31 +37,18 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="D:/developWS/hm66/hm66/黑马项目/src/com/ivy/hm66/MainActivity.java" title="MainActivity.java" tooltip="黑马项目/src/com/ivy/hm66/MainActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/黑马项目/src/com/ivy/hm66/MainActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1946" selectionTopPixel="912"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SDCardStorageActivity.java" partName="SDCardStorageActivity.java" path="D:/developWS/hm66/hm66/黑马项目/src/com/ivy/hm66/activity/SDCardStorageActivity.java" title="SDCardStorageActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/SDCardStorageActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/黑马项目/src/com/ivy/hm66/activity/SDCardStorageActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1247" selectionTopPixel="301"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_sdstoraget.xml" partName="activity_sdstoraget.xml" path="D:/developWS/hm66/hm66/黑马项目/res/layout/activity_sdstoraget.xml" title="activity_sdstoraget.xml" tooltip="黑马项目/res/layout/activity_sdstoraget.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/黑马项目/res/layout/activity_sdstoraget.xml"/>
-</editor>
 </editors>
 <views>
 <view id="com.android.ide.eclipse.ddms.views.ThreadView" partName="Threads">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
 <customFilters userDefinedPatternsEnabled="false">
@@ -87,13 +76,11 @@
 </customFilters>
 </viewState>
 </view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (16 items)"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -102,16 +89,10 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
 <view id="com.android.ide.eclipse.ddms.views.HeapView" partName="Heap"/>
 <view id="com.android.ide.eclipse.ddms.views.SysInfoView" partName="System Information"/>
-<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
-<viewState isPinned="false">
-<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
-</viewState>
+<view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false" time="true"/>
 </view>
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView" partName="Allocation Tracker"/>
 <view id="com.android.ide.eclipse.ddms.views.FileExplorerView" partName="File Explorer">
@@ -124,9 +105,6 @@
 <viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
 <viewState/>
 </view>
@@ -134,7 +112,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.android.ide.eclipse.ddms.Perspective" id="com.android.ide.eclipse.ddms.Perspective" label="DDMS"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -167,6 +145,7 @@
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="com.android.ide.eclipse.ddms.views.DeviceView"/>
 <view id="com.android.ide.eclipse.ddms.views.ThreadView"/>
 <view id="com.android.ide.eclipse.ddms.views.HeapView"/>
@@ -176,37 +155,27 @@
 <view id="com.android.ide.eclipse.ddms.views.EmulatorControlView"/>
 <view id="com.android.ide.eclipse.ddms.views.SysInfoView"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="devices">
-<folder activePageID="com.android.ide.eclipse.ddms.views.DeviceView" appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.DeviceView" label="Devices"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="devices">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.DeviceView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.DeviceView" label="Devices"/>
 <page content="com.android.ide.eclipse.ddms.views.DeviceView:*" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="devices">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="devices">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="logcat" ratio="0.8" ratioLeft="452" ratioRight="113" relationship="4" relative="devices">
-<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<info folder="true" part="logcat" ratio="0.42560554" ratioLeft="246" ratioRight="332" relationship="4" relative="devices">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.android.ide.eclipse.ddms.views.LogCatView:*" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.32619926" ratioLeft="442" ratioRight="913" relationship="2" relative="devices"/>
-<info folder="true" part="ddms-detail" ratio="0.5" ratioLeft="350" ratioRight="350" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.android.ide.eclipse.ddms.views.FileExplorerView" appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.ThreadView" label="Threads"/>
+<info part="org.eclipse.ui.editorss" ratio="0.29970545" ratioLeft="407" ratioRight="951" relationship="2" relative="devices"/>
+<info folder="true" part="ddms-detail" ratio="0.49947423" ratioLeft="475" ratioRight="476" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.EmulatorControlView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.ThreadView" label="Threads"/>
 <page content="com.android.ide.eclipse.ddms.views.HeapView" label="Heap"/>
 <page content="com.android.ide.eclipse.ddms.views.AllocTrackerView" label="Allocation Tracker"/>
 <page content="com.android.ide.eclipse.ddms.views.NetworkStatsView" label="Network Statistics"/>
@@ -214,8 +183,7 @@
 <page content="com.android.ide.eclipse.ddms.views.EmulatorControlView" label="Emulator Control"/>
 <page content="com.android.ide.eclipse.ddms.views.SysInfoView" label="System Information"/>
 <page content="com.android.ide.eclipse.ddms.views.ThreadView:*" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -228,7 +196,7 @@
 </mainWindow>
 </layout>
 </perspective>
-<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -287,249 +255,82 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<fastViewBars>
-<fastViewBar fastViewLocation="16384" id="left" orientation="512" selectedTabId="org.eclipse.jdt.ui.PackageExplorer" style="1">
-<fastViews>
-<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
-<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
-<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29948366"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView" ratio="0.29948366"/>
-<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-</fastViewBars>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@3350ebdd" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="left">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.08856089" ratioLeft="120" ratioRight="1235" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.6020761" ratioLeft="348" ratioRight="230" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
-<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LabelNotFound"/>
+<info part="org.eclipse.ui.editorss" ratio="0.1594096" ratioLeft="216" ratioRight="1139" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7214533" ratioLeft="417" ratioRight="161" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="com.android.ide.eclipse.ddms.views.OldLogCatView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<info folder="true" part="right" ratio="0.74975467" ratioLeft="764" ratioRight="255" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.6" ratioLeft="339" ratioRight="226" relationship="4" relative="left"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@23767262" ratio="0.82871974" ratioLeft="479" ratioRight="99" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.5989673" ratioLeft="348" ratioRight="233" relationship="4" relative="left"/>
 </mainWindow>
 </layout>
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/黑马项目/src/com/ivy/hm66/MainActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/黑马项目/src/com/ivy/hm66/activity/RWinSDCardActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/黑马项目/src/com/ivy/hm66/activity/SDCardStorageActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/黑马项目/res/layout/activity_sdstoraget.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/黑马项目/res/layout/activity_sdstoraget.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/Settings/res/values/strings.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/Settings/res/values/strings.xml"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Settings/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.text.format(Formatter.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.os(StatFs.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.os(StatFs.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/黑马项目/res/layout/activity_sdstoraget.xml"/>
-</editors>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="426" y="0"/>
-</item>
-<item historyLabel="activity_sdstoraget.xml" index="3">
-<position info="not_deleted" x="250" y="0"/>
-</item>
-<item historyLabel="activity_sdstoraget.xml" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="activity_sdstoraget.xml" index="4">
-<position info="not_deleted" x="437" y="262"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="327" y="0"/>
-</item>
-<item historyLabel="activity_sdstoraget.xml" index="3"/>
-<item historyLabel="MainActivity.java" index="0">
-<position info="not_deleted" x="1947" y="0"/>
-</item>
-<item historyLabel="RWinSDCardActivity.java" index="1">
-<position info="not_deleted" x="1518" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="0">
-<position info="not_deleted" x="1947" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="327" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="461" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="142" y="0"/>
-</item>
-<item historyLabel="StorageVolumePreferenceCategory.java" index="5">
-<position/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="142" y="0"/>
-</item>
-<item historyLabel="strings.xml" index="6">
-<position info="not_deleted" x="149477" y="11"/>
-</item>
-<item historyLabel="strings.xml" index="6">
-<position info="not_deleted" x="148953" y="16"/>
-</item>
-<item historyLabel="StorageVolumePreferenceCategory.java" index="5">
-<position info="not_deleted" x="9609" y="16"/>
-</item>
-<item historyLabel="strings.xml" index="7"/>
-<item historyLabel="StorageVolumePreferenceCategory.java" index="5">
-<position info="not_deleted" x="9609" y="16"/>
-</item>
-<item historyLabel="StorageVolumePreferenceCategory.java" index="5">
-<position info="not_deleted" x="12354" y="0"/>
-</item>
-<item historyLabel="StorageVolumePreferenceCategory.java" index="5">
-<position info="not_deleted" x="15950" y="0"/>
-</item>
-<item historyLabel="Formatter.class" index="8">
-<position info="not_deleted" x="1188" y="14"/>
-</item>
-<item historyLabel="StorageVolumePreferenceCategory.java" index="5">
-<position info="not_deleted" x="15950" y="0"/>
-</item>
-<item historyLabel="strings.xml" index="7"/>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="142" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="0">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="423" y="21"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="713" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="708" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="775" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="768" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position/>
-</item>
-<item historyLabel="StatFs.class" index="9">
-<position info="not_deleted" x="3533" y="22"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="934" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position/>
-</item>
-<item historyLabel="StatFs.class" index="10">
-<position info="not_deleted" x="2171" y="16"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="913" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="615" y="0"/>
-</item>
-<item historyLabel="activity_sdstoraget.xml" index="11">
-<position/>
-</item>
-<item historyLabel="activity_sdstoraget.xml" index="4">
-<position info="not_deleted" x="253" y="0"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="615" y="0"/>
-</item>
-<item historyLabel="MainActivity.java" index="0">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="activity_sdstoraget.xml" index="11">
-<position info="not_deleted" x="437" y="211"/>
-</item>
-<item historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="615" y="0"/>
-</item>
-<item active="true" historyLabel="SDCardStorageActivity.java" index="2">
-<position info="not_deleted" x="1307" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="bottom"/>
-<trimItem IMemento.internal.id="right"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -542,50 +343,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_sdstoraget.xml" tooltip="黑马项目/res/layout/activity_sdstoraget.xml">
-<persistable path="/黑马项目/res/layout/activity_sdstoraget.xml"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="SQLiteDatabase.class" tooltip="android.database.sqlite.SQLiteDatabase">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.database.sqlite(SQLiteDatabase.class"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="StatFs.class" tooltip="android.os.StatFs">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.os(StatFs.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyOpenHelper.java" tooltip="黑马项目/src/com/ivy/hm66/db/MyOpenHelper.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/db/MyOpenHelper.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SDCardStorageActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/SDCardStorageActivity.java">
-<persistable path="/黑马项目/src/com/ivy/hm66/activity/SDCardStorageActivity.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Formatter.class" tooltip="android.text.format.Formatter">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Settings/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.text.format(Formatter.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StorageVolumePreferenceCategory.java" tooltip="Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java">
-<persistable path="/Settings/src/com/android/settings/deviceinfo/StorageVolumePreferenceCategory.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="Settings/res/values/strings.xml">
-<persistable path="/Settings/res/values/strings.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_linearlayout.xml" tooltip="黑马项目/res/layout/activity_linearlayout.xml">
-<persistable path="/黑马项目/res/layout/activity_linearlayout.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CallDemoActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/CallDemoActivity.java">
-<persistable path="/黑马项目/src/com/ivy/hm66/activity/CallDemoActivity.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Environment.class" tooltip="android.os.Environment">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=黑马项目/D:\/develop\/adt-bundle-windows-x86_64_20140101\(hm66)\/sdk\/platforms\/android-18\/android.jar&lt;android.os(Environment.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RWinSDCardActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/RWinSDCardActivity.java">
-<persistable path="/黑马项目/src/com/ivy/hm66/activity/RWinSDCardActivity.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_rwinrom.xml" tooltip="黑马项目/res/layout/activity_rwinrom.xml">
-<persistable path="/黑马项目/res/layout/activity_rwinrom.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="黑马项目/src/com/ivy/hm66/MainActivity.java">
-<persistable path="/黑马项目/src/com/ivy/hm66/MainActivity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyContentProvider.java" tooltip="黑马项目/src/com/ivy/hm66/provider/MyContentProvider.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/provider/MyContentProvider.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="黑马项目/AndroidManifest.xml">
 <persistable path="/黑马项目/AndroidManifest.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonClickActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/ButtonClickActivity.java">
-<persistable path="/黑马项目/src/com/ivy/hm66/activity/ButtonClickActivity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="黑马项目/src/com/ivy/hm66/test/Test.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/test/Test.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RWinRomActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/RWinRomActivity.java">
-<persistable path="/黑马项目/src/com/ivy/hm66/activity/RWinRomActivity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContentObserveActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/ContentObserveActivity.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/activity/ContentObserveActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="Fake支付宝/res/layout/activity_main.xml">
+<persistable path="/Fake支付宝/res/layout/activity_main.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="Fake支付宝/src/com/ivy/alipay/MainActivity.java">
+<persistable path="/Fake支付宝/src/com/ivy/alipay/MainActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PhoneContact.java" tooltip="黑马项目/src/com/ivy/hm66/domain/PhoneContact.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/domain/PhoneContact.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Person.java" tooltip="黑马项目/src/com/ivy/hm66/domain/Person.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/domain/Person.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersistentCookieStore.java" tooltip="黑马项目/src/com/loopj/android/http/PersistentCookieStore.java">
+<persistable path="/黑马项目/src/com/loopj/android/http/PersistentCookieStore.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetAllSmsActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/GetAllSmsActivity.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/activity/GetAllSmsActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_aaa.xml" tooltip="黑马项目/res/layout/activity_aaa.xml">
+<persistable path="/黑马项目/res/layout/activity_aaa.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetAllContactsActivity.java" tooltip="黑马项目/src/com/ivy/hm66/activity/GetAllContactsActivity.java">
+<persistable path="/黑马项目/src/com/ivy/hm66/activity/GetAllContactsActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_aa.xml" tooltip="黑马项目/res/layout/activity_aa.xml">
+<persistable path="/黑马项目/res/layout/activity_aa.xml"/>
 </file>
 </mruList>
 </workbench>
