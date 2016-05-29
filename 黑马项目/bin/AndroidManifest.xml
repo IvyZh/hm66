@@ -28,10 +28,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.camera" />
-    <uses-permission android:name="android.permission.WRITE_SMS"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -103,6 +104,12 @@
         <activity android:name="com.ivy.hm66.activity.GetAllSmsActivity" />
         <activity android:name="com.ivy.hm66.activity.GetAllContactsActivity" />
         <activity android:name="com.ivy.hm66.activity.ContentObserveActivity" />
+        <activity android:name="com.ivy.hm66.activity.FragmentDemoActivity" />
+        <activity android:name="com.ivy.hm66.activity.FragmentDemo02Activity" />
+        <activity android:name="com.ivy.hm66.activity.FrameAnimationActivity" />
+        <activity android:name="com.ivy.hm66.activity.TweenActivity" />
+        <activity android:name="com.ivy.hm66.activity.ObjectAnimationActivity" />
+        <activity android:name="com.ivy.hm66.activity.JNIActivity" />
         <!-- ===============================Activity==================================== -->
 
 
